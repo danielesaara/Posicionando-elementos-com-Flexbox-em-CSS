@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>align content</title>
+	<script type="text/javascript">
+		/*Align-content
+
+		-É a propriedade responsável por tratar o alinhamento das linhas do container
+		em relação ao eixo vertical do container.
+
+		PRECISAMOS QUE:
+
+		-O container utilize quebra de linhas;
+		-A altura do container seja maior que a soma das linhas dos itens;
+
+		TIPOS DE ALINHAMENTO:
+
+		-center: alinhamento dos itens ao centro
+		-stretch: padrão, e os itens cresçam igualmente
+		-flex-start: alinhamento dos itens no início
+		-flex-end: alinhamento no final
+		-space-between: cria um espaçamento igual entre os elementos (primeiro item prox ao topo, último item proximo ao final)
+		-space-around: os espaçamentos do meio são duas vezes maiores que o inicial e final.
+	</script>
+	<style type="text/css">
+		.container{
+			height: 360px;
+			max-width: 300px;
+			display: flex;
+			flex-wrap: wrap;
+			border:  1px solid black;
+		}
+		.item{
+			background-color: violet;
+			padding: 0 5px;
+			margin: 5px;
+			flex: 1;
+			text-align: center;
+			color: white;
+		}
+		.stretch{
+			align-content: stretch;
+		}
+		.center{
+			align-content: center;
+		}
+	.flex-start{
+		align-content: flex-start;
+	}
+	.flex-end{
+		align-content: flex-end;
+	}
+	.space-between{
+		align-content: space-between;
+	}
+	.space-around{
+		align-content: space-around;
+	}
+	</style>
+</head>
+<body>
+	<p>stretch</p>
+	<div class="container stretch">
+		<div class="item">Lorem Ipsum is therefore always free from</div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is therefore always free fromLorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+
+	<p>center</p>
+	<div class="container center">
+		<div class="item">Lorem Ipsum is therefore always free from</div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is therefore always free fromLorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+
+<p>flex-start</p>
+	<div class="container flex-start">
+		<div class="item">Lorem Ipsum is therefore always free from</div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is therefore always free fromLorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+<p>flex-end</p>
+	<div class="container flex-end">
+		<div class="item">Lorem Ipsum is therefore always free from</div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is therefore always free fromLorem Ipsum is therefore always free </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+	<p>space-between</p>
+	<div class="container space-between">
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+
+	<p>space-around</p>
+	<div class="container space-around">
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is therefore </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+		<div class="item">Lorem Ipsum is </div>
+	</div>
+</body>
+</html>
